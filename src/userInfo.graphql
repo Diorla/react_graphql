@@ -1,0 +1,30 @@
+query {
+  # The user unique ID
+  user(id: "#12") {
+    # All of this information will be returned
+    id
+    name
+    email
+    role
+    gender
+    birthday
+    phone
+    isAgreePolicy
+    isAgreePrivacy
+    state
+    language
+    createdAt
+    updatedAt
+    alarmSetting {
+      noticeAlarm
+      appPushAllow
+      smsAllow
+      userAlarm
+      matchAlarm
+      tokens
+      kakaoAllow
+    }
+    myPoint
+    socialType
+  }
+}

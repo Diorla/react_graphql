@@ -1,0 +1,23 @@
+# graph sample
+query {
+  myLikeMeetinges(
+    filter: { user__id: { value: 4, operator: NOT_EQUAL } }
+    sort: { createdAt: DESC, updatedAt: ASC }
+    first: 4
+    after: "hello"
+    offset: 2
+  ) {
+    pageInfo {
+      hasNextPage,
+      startCursor,
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        id
+      }
+    }
+  }
+}
